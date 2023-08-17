@@ -1,0 +1,3 @@
+SELECT COUNT(DISTINCT UserID) AS NumUsersBoth
+FROM Seller
+WHERE UserID IN (SELECT UserID FROM Bidder);

@@ -1,0 +1,6 @@
+SELECT COUNT(DISTINCT UserID) AS NumUsers
+FROM (
+  SELECT UserID FROM Seller
+  UNION
+  SELECT UserID FROM Bidder
+) AS AllUserIDs;
